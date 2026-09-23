@@ -161,6 +161,35 @@ footer{
   font-size:28px;
   text-decoration:none;
 }
+  .carrossel{
+  width:90%;
+  max-width:1200px;
+  margin:20px auto;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+.carrossel-track{
+  display:flex;
+  gap:15px;
+  animation:deslizar 8s infinite steps(4);
+}
+
+.carrossel-track img{
+  width:100%;
+  min-width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+@keyframes deslizar{
+  0%,20%{transform:translateX(0);}
+  25%,45%{transform:translateX(-100%);}
+  50%,70%{transform:translateX(-200%);}
+  75%,95%{transform:translateX(-300%);}
+  100%{transform:translateX(0);}
+}
 </style>
 </head>
 
@@ -198,6 +227,14 @@ footer{
   <div class="categoria">🏷️ Ofertas</div>
 </section>
 
+  <div class="carrossel">
+  <div class="carrossel-track">
+    <img src="https://placehold.co/300x300?text=Produto+1">
+    <img src="https://placehold.co/300x300?text=Produto+2">
+    <img src="https://placehold.co/300x300?text=Produto+3">
+    <img src="https://placehold.co/300x300?text=Produto+4">
+  </div>
+</div>
 <main class="container" id="produtos">
   <h2>Produtos em destaque</h2>
 
