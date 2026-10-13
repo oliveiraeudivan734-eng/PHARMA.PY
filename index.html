@@ -169,27 +169,45 @@ footer{
   border-radius:18px;
 }
 
-.carrossel-track{
-  display:flex;
-  gap:15px;
-  animation:deslizar 8s infinite steps(4);
+
+.carrossel-track {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: deslizar 8s infinite;
 }
 
-.carrossel-track img{
-  width:100%;
-  min-width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:18px;
+.carrossel-track .produto {
+  flex: 0 0 180px;
+  width: 180px;
+  box-sizing: border-box;
 }
 
-@keyframes deslizar{
-  0%,20%{transform:translateX(0);}
-  25%,45%{transform:translateX(-100%);}
-  50%,70%{transform:translateX(-200%);}
-  75%,95%{transform:translateX(-300%);}
-  100%{transform:translateX(0);}
+.carrossel-track .produto img {
+  width: 100%;
+  min-width: 0;
+  height: 150px;
+  object-fit: contain;
 }
+
+@keyframes deslizar {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  25%, 45% {
+    transform: translateX(-195px);
+  }
+  50%, 70% {
+    transform: translateX(-390px);
+  }
+  75%, 95% {
+    transform: translateX(-585px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 </style>
 </head>
 
@@ -229,10 +247,26 @@ footer{
 
   <div class="carrossel">
   <div class="carrossel-track">
-    <img src="https://placehold.co/300x300?text=Produto+1">
-    <img src="https://placehold.co/300x300?text=Produto+2">
-    <img src="https://placehold.co/300x300?text=Produto+3">
-    <img src="https://placehold.co/300x300?text=Produto+4">
+    <div class="produto">
+  <img src="https://placehold.co/300x300?text=TG+15" alt="TG 15">
+  <h3>TG 15 mg</h3>
+  <div class="preco">Consultar</div>
+</div>
+<div class="produto">
+  <img src="https://placehold.co/300x300?text=Tirzec" alt="Tirzec">
+  <h3>Tirzec 15 mg</h3>
+  <div class="preco">Consultar</div>
+</div>
+<div class="produto">
+  <img src="https://placehold.co/300x300?text=Lipoland" alt="Lipoland">
+  <h3>Lipoland - 4 ampolas</h3>
+  <div class="preco">Consultar</div>
+</div>
+<div class="produto">
+  <img src="https://placehold.co/300x300?text=Lipoless" alt="Lipoless">
+  <h3>Lipoless 15 mg</h3>
+  <div class="preco">Consultar</div>
+</div>
   </div>
 </div>
 <main class="container" id="produtos">
